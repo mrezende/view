@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/ola', function(){
+Route::get('/ola/', function(){
+
   return view('ola');
 });
+
+Route::get('/cursos', 'CursosController@index');
+
+Route::get('/cursos/{index}','CursosController@show');
